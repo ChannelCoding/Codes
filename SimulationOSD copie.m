@@ -1,6 +1,8 @@
 %--- SIMULATION : Ordering Statistics Decoding : Soft-Decison Decoding ---%
 %---------------- Application au code de Hamming (7,4,3) -----------------%
 
+
+%%%ESSSS
 clear all;
 close all;
 seed = 1000; 
