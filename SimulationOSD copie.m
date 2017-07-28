@@ -2,7 +2,6 @@
 %---------------- Application au code de Hamming (7,4,3) -----------------%
 
 
-%%%ESSSS
 clear all;
 close all;
 seed = 1000; 
@@ -45,7 +44,7 @@ for kk = 1:length(SNRdb)
    
     % Rapport signal sur bruit 
     
-    SNRlin = 10.^(SNRdb(kk)./10);       % SNR en echelle lineaire(normalisé)
+    SNRlin = 10.^(SNRdb(kk)./10);       % SNR en echelle lineaire(normalisÃ©)
     sigmaw = 1/(2*R*SNRlin);            % variance du bruit
     
     % Generation des mots de codes
@@ -79,10 +78,10 @@ end
 
 % Modulation MDP-2 
 
-% Probabilité d'erreur binaire apres decodage ferme
+% ProbabilitÃ© d'erreur binaire apres decodage ferme
 mdp2_ferme = 0.5*erfc(sqrt(10.^(SNRdb/10))); 
 
-% Probabilité d'erreur binaire apres decodage souple
+% ProbabilitÃ© d'erreur binaire apres decodage souple
 mdp2_souple = 0.5*(n^(-1))*dmin*A_dmin*erfc(sqrt(dmin*R*sqrt(10.^(SNRdb/10))));
 
 figure(1);
@@ -97,7 +96,7 @@ semilogy(SNRdb,Teb_osd0,'b-*','markersize',08,'linewidth',0.5); % OSD d'ordre 0
 
 axis([0 12 10^-7 10^0]) 
 
-legend({'Transmission non codée ferme','Transmission non codée souple',...
+legend({'Transmission non codÃ©e ferme','Transmission non codÃ©e souple',...
          'Simulation - OSD d''ordre 0'},'Location','best','FontSize',15,...
          'FontWeight','bold','color','w');
 
